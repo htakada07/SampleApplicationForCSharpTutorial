@@ -52,7 +52,67 @@ namespace ConditionalStatements
             #endregion
 
             #region switch statement
-            int 
+            int day = 4;
+            switch (day)
+            {
+                case 1:
+                    Console.WriteLine("Monday");
+                    break;
+                case 2:
+                    Console.WriteLine("Tuesday");
+                    break;
+                case 3:
+                    Console.WriteLine("Wednesday");
+                    break;
+                case 4:
+                    Console.WriteLine("Thursday");
+                    break;
+                case 5:
+                    Console.WriteLine("Friday");
+                    break;
+                case 6:
+                    Console.WriteLine("Saturday");
+                    break;
+                case 7:
+                    Console.WriteLine("Sunday");
+                    break;
+            }
+            // Outputs "Thursday" (day 4)
+            #endregion
+
+            #region nested switch statement
+            int e = 1, q = 2;
+
+            // Outer Switch
+            switch (e)
+            {
+                // If x == 1
+                case 1:
+                    // Nested Switch
+                    switch (q)
+                    {
+                        // If y == 2
+                        case 2:
+                            Console.WriteLine("Choice is 2");
+                            break;
+                        // If y == 3
+                        case 3:
+                            Console.WriteLine("Choice is 3");
+                            break;
+                    }
+                    break;
+                // If x == 4
+                case 4:
+                    Console.WriteLine("Choice is 4");
+                    break;
+                // If x == 5
+                case 5:
+                    Console.WriteLine("Choice is 5");
+                    break;
+                default:
+                    Console.WriteLine("Choice is other than 1, 2 3, 4, or 5");
+                    break;
+            }
             #endregion
         }
     }
